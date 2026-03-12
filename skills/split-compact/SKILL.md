@@ -1,12 +1,9 @@
-# Split Compact
-
-Create a compacted summary of this conversation and open it in a new Claude session in a horizontal split.
-
-## Arguments
-
-The user provided this argument: `$ARGUMENTS`
-
-## Instructions
+---
+name: split-compact
+description: Create a compacted summary of this conversation and open it in a new Claude session in a horizontal split.
+argument-hint: [file.md | focus-guidance]
+allowed-tools: Read, Write, Bash(cmux *)
+---
 
 ### Step 1: Determine the prompt for the new session
 

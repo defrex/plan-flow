@@ -1,12 +1,9 @@
-# Design
-
-Design a feature through conversation, producing a structured design doc, then hand off to a fresh Claude session for implementation.
-
-## Arguments
-
-The user provided this argument: `$ARGUMENTS`
-
-## Instructions
+---
+name: design
+description: Design a feature through conversation, producing a structured design doc, then hand off to a fresh Claude session for implementation.
+argument-hint: [feature-name | finish]
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash(cmux *), Bash(mkdir *)
+---
 
 Check the argument and follow the appropriate mode:
 
