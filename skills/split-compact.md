@@ -43,10 +43,10 @@ The above is a summary of a previous conversation that was compacted. Please ask
 cmux new-pane --type terminal --direction down
 ```
 
-3. Then seed a session and open it interactively using the surface ref from the previous command. This is a two-step process — first `claude -p` processes the prompt and creates a session, then `claude --continue` resumes it interactively:
+3. Then open an interactive Claude session with the prompt as the first message, using the surface ref from the previous command:
 
 ```bash
-cmux send --surface <surface_ref> 'claude -p < /tmp/claude-compact-prompt.md && claude --continue'
+cmux send --surface <surface_ref> 'claude "$(cat /tmp/claude-compact-prompt.md)"'
 cmux send-key --surface <surface_ref> Enter
 ```
 
