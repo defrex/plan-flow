@@ -27,7 +27,11 @@ Figure out which feature design to hand off:
 2. If unclear, find the most recently modified `specs/*/design.md` file
 3. If still unclear, ask the user which feature to finish
 
-#### Step 2: Write the handoff prompt
+#### Step 2: Commit the design doc
+
+Commit `specs/[feature]/design.md` with the message: `Add design doc for [feature]`
+
+#### Step 3: Write the handoff prompt
 
 Write a handoff prompt to `/tmp/claude-design-prompt.md` with the following content:
 
@@ -39,7 +43,7 @@ Ask the user how they'd like to proceed with implementation.
 
 Replace `[feature]` with the actual feature name.
 
-#### Step 3: Open new session in split
+#### Step 4: Open new session in split
 
 1. Create a horizontal split:
 
@@ -54,7 +58,7 @@ cmux send --surface <surface_ref> 'claude "$(cat /tmp/claude-design-prompt.md)"'
 cmux send-key --surface <surface_ref> Enter
 ```
 
-#### Step 4: Confirm
+#### Step 5: Confirm
 
 Tell the user the implementation session has been opened and which design doc it's referencing.
 
@@ -76,7 +80,6 @@ Design a feature iteratively, producing `specs/[feature]/design.md`.
 3. Draft a design doc at `specs/[feature]/design.md` covering:
    - **Overview**: What the feature does and why
    - **Design**: How it works — architecture, data flow, key components
-   - **Implementation Plan**: Ordered steps to build it, with file paths where relevant
    - **Open Questions**: Anything that needs user input or further thought
 
 Use your understanding of the codebase to make the design concrete and specific. Reference actual files, functions, and patterns from the existing code.
