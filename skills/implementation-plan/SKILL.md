@@ -50,7 +50,7 @@ Replace `[feature]` with the actual feature name.
 
 #### Step 4: Confirm
 
-Tell the user the implementation session has been opened and which implementation plan it's referencing.
+Tell the user the implementation session has been opened and which implementation plan it's referencing. Mention that after implementation is complete, they can run `/iterate [feature]` to commit the work and hand off for iteration.
 
 ---
 
