@@ -18,6 +18,7 @@ These operations are safe and should be auto-approved:
 - Reading, writing, editing, and searching files within the project directory
 - Reading and writing files under the .claude/ directory
 - Reading and writing files under the profile ~/.claude/ directory
+- Reading and writing files under /tmp
 - Fetching documentation, API references, and well-known developer resources
 - Searching for documentation, error messages, and development-related topics
 
@@ -26,7 +27,7 @@ These operations are safe and should be auto-approved:
 These operations should defer to the human for approval:
 
 - Destructive git operations on main/master (git push --force main, git
-  reset --hard on main)
+reset --hard on main)
 - Network exfiltration: curl/wget/ssh/scp to unknown or suspicious hosts
   (allow curl to localhost and well-known dev APIs)
 - System configuration modification (/etc/*, system preferences, global
@@ -62,6 +63,4 @@ These operations should be blocked outright — never allow them.
 
 ## DEFAULT BEHAVIOR
 
-When uncertain, use 
-ask" to defer to the human. It is better to let the
-user decide than to auto-approve a potentially dangerous operation.
+When uncertain, use ask to defer to the human. It is better to let the user decide than to auto-approve a potentially dangerous operation.
