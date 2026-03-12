@@ -31,19 +31,7 @@ Figure out which feature design to hand off:
 
 Commit `specs/[feature]/design.md` with the message: `Add design doc for [feature]`
 
-#### Step 3: Write the handoff prompt
-
-Write a handoff prompt to `/tmp/claude-design-prompt.md` with the following content:
-
-```
-Read the design doc at specs/[feature]/design.md — it contains the full specification for this feature.
-
-Ask the user how they'd like to proceed with implementation.
-```
-
-Replace `[feature]` with the actual feature name.
-
-#### Step 4: Open new session in split
+#### Step 3: Open new session in split
 
 1. Create a horizontal split:
 
@@ -51,16 +39,18 @@ Replace `[feature]` with the actual feature name.
 cmux new-pane --type terminal --direction down
 ```
 
-2. Start Claude in the new pane with the handoff prompt:
+2. Start Claude in the new pane with the `/implementation-plan` skill:
 
 ```bash
-cmux send --surface <surface_ref> 'claude "$(cat /tmp/claude-design-prompt.md)"'
+cmux send --surface <surface_ref> 'claude "/implementation-plan specs/[feature]/design.md"'
 cmux send-key --surface <surface_ref> Enter
 ```
 
-#### Step 5: Confirm
+Replace `[feature]` with the actual feature name.
 
-Tell the user the implementation session has been opened and which design doc it's referencing.
+#### Step 4: Confirm
+
+Tell the user the implementation planning session has been opened and which design doc it's referencing.
 
 ---
 
