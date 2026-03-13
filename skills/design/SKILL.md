@@ -63,18 +63,26 @@ Design a feature iteratively, producing `specs/[feature]/design.md`.
 - **If `specs/[feature]/design.md` exists**: Read it, give a brief summary of what's in it, and ask the user what they'd like to change or discuss.
 - **If it doesn't exist**: Proceed to Step 2.
 
-#### Step 2: Explore and draft
+#### Step 2: Create directory and discuss
+
+1. Create the `specs/[feature]/` directory
+2. Ask the user to explain what they're looking for. Have a conversation to understand requirements, constraints, and goals before writing anything.
+
+Do NOT explore the codebase or draft the design doc yet. Wait for the user to explain and for any discussion to resolve.
+
+#### Step 3: Explore and draft
+
+Once you understand what the user wants:
 
 1. Explore the codebase to understand the current architecture, patterns, and relevant code
-2. Create the `specs/[feature]/` directory
-3. Draft a design doc at `specs/[feature]/design.md` covering:
+2. Draft a design doc at `specs/[feature]/design.md` covering:
    - **Overview**: What the feature does and why
    - **Design**: How it works — architecture, data flow, key components
    - **Open Questions**: Anything that needs user input or further thought
 
 Use your understanding of the codebase to make the design concrete and specific. Reference actual files, functions, and patterns from the existing code.
 
-#### Step 3: Open the markdown viewer
+#### Step 4: Open the markdown viewer
 
 Run this command so the user can see the design doc rendered:
 
@@ -84,6 +92,6 @@ cmux markdown open specs/[feature]/design.md
 
 This stays open and auto-refreshes — no need to re-run after updates.
 
-#### Step 4: Iterate
+#### Step 5: Iterate
 
 The design doc is now open. Tell the user what you've drafted and ask for feedback. As the user requests changes, update `specs/[feature]/design.md` accordingly. The markdown viewer will reflect changes automatically.
