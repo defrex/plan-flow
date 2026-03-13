@@ -7,7 +7,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash(mkdir *), Bash(git *)
 
 ### Step 0: Validate argument
 
-If no argument is provided, tell the user: `/pln:save [feature-name]`
+If no argument is provided, deduce from context or tell the user: `/pln:save [feature-name]`
 
 ---
 
@@ -30,8 +30,6 @@ Explore the codebase to understand what was actually built:
 ### Step 4: Commit the implementation
 
 Stage all implementation files (not the specs) and commit with the message: `Implement [feature]`
-
-Ask the user to confirm before committing.
 
 ### Step 5: Write implementation details
 

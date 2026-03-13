@@ -7,7 +7,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash(mkdir *)
 
 ### Step 0: Validate argument
 
-If no argument is provided, tell the user: `/pln:plan [feature-name]`
+If no argument is provided, deduce from context or tell the user: `/pln:plan [feature-name]`
 
 ---
 

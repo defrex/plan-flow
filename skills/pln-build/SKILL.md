@@ -7,7 +7,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash(mkdir *), Bash(bun *)
 
 ### Step 0: Validate argument
 
-If no argument is provided, tell the user: `/pln:build [feature-name]`
+If no argument is provided, deduce from context or tell the user: `/pln:build [feature-name]`
 
 ---
 
@@ -39,4 +39,4 @@ After all steps are complete, run a code review as described in the plan. Fix an
 
 Tell the user implementation is complete and summarize what was built.
 
-Suggest they run `/clear` and then `/pln:save [feature]` to commit and document the implementation.
+Suggest they run `/pln:save` to commit and document the implementation and then `/clear` and `/pln:iterate [feature]` to make further changes.
